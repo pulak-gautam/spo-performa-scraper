@@ -94,8 +94,16 @@ def populateDictionary(df, dict, filename):
         for column_name, cell_value in row.items():
             if(cell_value == "Yes"):
                 try:
-                    dict[column_name][index].append(filename.replace(".pdf", ""))
+                    dict[column_name][index].append((filename.replace(".pdf", "")).replace("./", ""))
                 except:
                     pass
             # print(f"Cell at row: {index}, column: {column_name} has value: {cell_value}")
     return
+
+def write_to_txt_file(file_path, text_to_write):
+    try:
+        with open(file_path, 'w') as file:
+            file.write(text_to_write)
+        print("Text has been written to the file successfully.")
+    except Exception as e:
+        print(f"Error occurred: {e}")
