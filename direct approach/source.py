@@ -88,3 +88,14 @@ def populateDataFrame(df, filtered_lines):
         index += 1
 
     return df
+
+def populateDictionary(df, dict, filename):
+    for index, row in df.iterrows():
+        for column_name, cell_value in row.items():
+            if(cell_value == "Yes"):
+                try:
+                    dict[column_name][index].append(filename.replace(".pdf", ""))
+                except:
+                    pass
+            # print(f"Cell at row: {index}, column: {column_name} has value: {cell_value}")
+    return
