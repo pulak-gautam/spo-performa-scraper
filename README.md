@@ -17,9 +17,3 @@ This was mostly created out of a personal need, since I was very frustrated thro
 
 ## Functions
 The most common use-case of **sorting out / listing companies according to branch/degree** has been automated through this tool.
-
-
-## Future Plans
-Currently, the tool only filters the performas/roles on the basis branch, and prints out it in an organized fashion on the terminal. 
-
-It provides no extra information about the roles/companies. Thus, it can be modified to spit out more information such as stipend, location, etc. also.
